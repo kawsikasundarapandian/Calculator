@@ -1,0 +1,118 @@
+#calculator using GUI
+
+from tkinter import *
+
+t=Tk()
+
+o1=Entry(t,font=("times",30),background="black",fg="aqua")
+o1.place(x=500,y=130,width=350,height=80)
+
+def add():
+    o1.insert(END,'+')
+
+def sub():
+    o1.insert(END,'-')
+
+def mul():
+    o1.insert(END,'*')
+
+def div():
+    o1.insert(END,'/')
+
+def per():
+    n=float(o1.get())
+    o1.delete(0,END)
+    ans=n/100
+    o1.insert(0,ans)
+
+def sum():
+    p=str(o1.get())
+    o1.delete(0,END)
+    ans=eval(p)
+    o1.insert(0,ans)
+    
+
+
+def u1():
+    o1.insert(END,1)
+def u2():
+    o1.insert(END,2)
+def u3():
+    o1.insert(END,3)
+def u4():
+    o1.insert(END,4)
+def u5():
+    o1.insert(END,5)
+def u6():
+    o1.insert(END,6)
+def u7():
+    o1.insert(END,7)
+def u8():
+    o1.insert(END,8)
+def u9():
+    o1.insert(END,9)
+def u10():
+    o1.insert(END,'.')
+def u11():
+    o1.insert(END,0)
+def u12():
+    o1.insert(END,'(')
+def u13():
+    o1.insert(END,')')
+
+
+
+def clr():
+    w=o1.get()
+    c=''
+    for i in range(len(w)-1):
+        c=c+w[i]
+    o1.delete(0,END)
+    o1.insert(0,c)
+
+
+a1=Button(t,text=1,width=4,height=1,background="black",fg="aqua",font=("times",20),command=u1)
+a1.place(x=500,y=200)
+a1=Button(t,text=2,width=4,height=1,background="black",fg="aqua",font=("times",20),command=u2)
+a1.place(x=570,y=200)
+a1=Button(t,text=3,width=4,height=1,background="black",fg="aqua",font=("times",20),command=u3)
+a1.place(x=640,y=200)
+a1=Button(t,text=4,width=4,height=1,background="black",fg="aqua",font=("times",20),command=u4)
+a1.place(x=500,y=254)
+a1=Button(t,text=5,width=4,height=1,background="black",fg="aqua",font=("times",20),command=u5)
+a1.place(x=570,y=254)
+a1=Button(t,text=6,width=4,height=1,background="black",fg="aqua",font=("times",20),command=u6)
+a1.place(x=640,y=254)
+a1=Button(t,text=7,width=4,height=1,background="black",fg="aqua",font=("times",20),command=u7)
+a1.place(x=500,y=308)
+a1=Button(t,text=8,width=4,height=1,background="black",fg="aqua",font=("times",20),command=u8)
+a1.place(x=570,y=308)
+a1=Button(t,text=9,width=4,height=1,background="black",fg="aqua",font=("times",20),command=u9)
+a1.place(x=640,y=308)
+a1=Button(t,text=".",width=4,height=1,background="black",fg="aqua",font=("times",20),command=u10)
+a1.place(x=500,y=362)
+a1=Button(t,text=0,width=4,height=1,background="black",fg="aqua",font=("times",20),command=u11)
+a1.place(x=570,y=362)
+a1=Button(t,text="=",width=4,height=1,background="black",fg="aqua",font=("times",20),command=sum)
+a1.place(x=640,y=362)
+a1=Button(t,text="%",width=4,height=1,background="black",fg="aqua",font=("times",20),command=per)
+a1.place(x=780,y=200)
+a1=Button(t,text="(",width=4,height=1,background="black",fg="aqua",font=("times",20),command=u12)
+a1.place(x=780,y=254)
+a1=Button(t,text=")",width=4,height=1,background="black",fg="aqua",font=("times",20),command=u13)
+a1.place(x=780,y=308)
+a1=Button(t,text="AC",width=4,height=1,background="black",fg="aqua",font=("times",20),command=clr)
+a1.place(x=780,y=362)
+
+a1=Button(t,text="+",width=4,height=1,background="black",fg="aqua",font=("times",20),command=add)
+a1.place(x=710,y=200)
+a1=Button(t,text="-",width=4,height=1,background="black",fg="aqua",font=("times",20),command=sub)
+a1.place(x=710,y=254)
+a1=Button(t,text="*",width=4,height=1,background="black",fg="aqua",font=("times",20),command=mul)
+a1.place(x=710,y=308)
+a1=Button(t,text="/",width=4,height=1,background="black",fg="aqua",font=("times",20),command=div)
+a1.place(x=710,y=362)
+a1=Button(t,text="C",width=4,height=1,background="black",fg="aqua",font=("times",20),command=clr)
+a1.place(x=10,y=10)
+
+t.mainloop()
